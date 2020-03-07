@@ -1,5 +1,4 @@
-ALTER SESSION SET CONTAINER=CUSTOMSCRIPTS;
-CREATE USER TEST IDENTIFIED BY test;
-GRANT CONNECT, RESOURCE TO TEST;
-ALTER USER TEST QUOTA UNLIMITED ON USERS;
+alter session set "_ORACLE_SCRIPT"=true;
+create user jb identified by pass;
+grant connect, resource, dba to jb;
 exit;
